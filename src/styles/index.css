@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', ' Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce-3d {
+  0%, 100% {
+    transform: rotateX(25deg) rotateY(30deg) translateY(0px);
+  }
+  25% {
+    transform: rotateX(30deg) rotateY(35deg) translateY(-20px);
+  }
+  50% {
+    transform: rotateX(20deg) rotateY(25deg) translateY(0px);
+  }
+  75% {
+    transform: rotateX(35deg) rotateY(40deg) translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotateX(25deg) rotateY(30deg);
+  }
+  50% {
+    transform: translateY(-15px) rotateX(30deg) rotateY(35deg);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-bounce-3d {
+  animation: bounce-3d 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
