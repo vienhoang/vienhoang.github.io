@@ -27,5 +27,14 @@ export const projects: Project[] = [
     imageUrl: `${import.meta.env.BASE_URL}images/bitcoin-value-projector.jpg`,
     demoUrl: 'https://bitcoin-value-projector.pages.dev/',
     color: 'bg-cube-peach',
+  },
+  {
+    id: 3,
+    name: 'Viper Port Scanner',
+    description: 'Viper Port Scanner is a feature-enhanced Python tool that scans ports, saves results, and adds a fun visual and audio experience while you wait.',
+    technologies: ['Python'],
+    imageUrl: `${import.meta.env.BASE_URL}images/portscanner.jpg`,
+    repoUrl: 'https://github.com/vienhoang/viper-port-scanner',
+    color: 'bg-cube-blue',
   }
 ]
