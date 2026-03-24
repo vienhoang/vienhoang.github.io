@@ -31,7 +31,7 @@ export const projects: Project[] = [
   {
     id: 3,
     name: 'Viper Port Scanner',
-    description: 'Viper Port Scanner is a feature-enhanced Python tool that scans ports, saves results, and adds a fun visual and audio experience while you wait.',
+    description: 'A Python tool that scans ports, saves results, and adds a fun visual and audio experience while you wait.',
     technologies: ['Python'],
     imageUrl: `${import.meta.env.BASE_URL}images/portscanner.jpg`,
     repoUrl: 'https://github.com/vienhoang/viper-port-scanner',
