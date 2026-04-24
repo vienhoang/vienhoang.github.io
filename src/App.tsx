@@ -204,7 +204,7 @@ function App() {
       <section className="relative z-0 pt-20 pb-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-4">
-            Hello, I'm <span className="text-blue-600">Vien</span>
+            Hello, I'm <span className="text-blue-600 animate-shake">Vien</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8">
             Creative AI Agentic Coder | Network Engineer Student
