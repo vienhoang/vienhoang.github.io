@@ -36,5 +36,14 @@ export const projects: Project[] = [
     imageUrl: `${import.meta.env.BASE_URL}images/portscanner.jpg`,
     repoUrl: 'https://github.com/vienhoang/viper-port-scanner',
     color: 'bg-cube-blue',
+  },
+  {
+    id: 4,
+    name: 'Air Fryer Calculator',
+    description: 'AirFryerCalculator.net is a fast, accurate online tool that converts conventional oven temperatures and cooking times to air fryer settings, complete with a comprehensive food guide and detailed cooking tutorials to help users cook restaurant-quality meals at home.',
+    technologies: ['JavaScript', 'HTML', 'CSS'],
+    imageUrl: `${import.meta.env.BASE_URL}images/airfryercalculator.jpg`,
+    demoUrl: 'https://www.airfryercalculator.net/',
+    color: 'bg-cube-sage',
   }
 ]

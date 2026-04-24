@@ -207,7 +207,7 @@ function App() {
             Hello, I'm <span className="text-blue-600">Vien</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8">
-            Creative Developer | Network Engineer Student
+            Creative AI Agentic Coder | Network Engineer Student
           </p>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
             I enjoy building small useful tools and experimenting with AI to accelerate learning.
