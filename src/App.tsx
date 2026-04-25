@@ -306,19 +306,20 @@ function App() {
           <p className="text-gray-600 mb-8">
             Have a project in mind or want to collaborate? Feel free to reach out!
           </p>
-          <a
-            href="https://www.linkedin.com/in/vien-hoang-5077bb96/" target='_blank'
-            className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-lg shadow-lg"
-          >
-            LinkedIn
-          </a>
-          &nbsp;
-          <a
-            href="mailto:hoang.vien@proton.me"
-            className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-lg shadow-lg"
-          >
-            Email Me
-          </a>
+          <div className="flex justify-center gap-2.5">
+            <a
+              href="https://www.linkedin.com/in/vien-hoang-5077bb96/" target='_blank'
+              className="contact-button inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-lg shadow-lg"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="mailto:hoang.vien@proton.me"
+              className="contact-button inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-lg shadow-lg"
+            >
+              Email Me
+            </a>
+          </div>
         </div>
       </section>
 
