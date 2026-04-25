@@ -19,6 +19,7 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false)
   const [hoveredCubeId, setHoveredCubeId] = useState<number | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
+  const shineRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     const containerWidth = window.innerWidth
@@ -40,6 +41,24 @@ function App() {
     }))
 
     setCubes(initialCubes)
+  }, [])
+
+  useEffect(() => {
+    const section = shineRef.current
+    if (!section) return
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          section.classList.add('shine-active')
+          observer.unobserve(section)
+        }
+      })
+    }, { threshold: 0.3 })
+
+    observer.observe(section)
+
+    return () => observer.disconnect()
   }, [])
 
   const checkCollision = useCallback((c1: CubeState, c2: CubeState) => {
@@ -225,7 +244,7 @@ function App() {
           </p>
         </div>
 
-        <div className="relative w-full h-[60vh]">
+        <div className="relative w-full h-[60vh] bg-blue-gradient-animate">
           {cubes.map((cube) => (
             <Cube
               key={cube.id}
@@ -263,7 +282,7 @@ function App() {
         </div>
       </section>
 
-      <section className="relative z-0 py-16 px-4 bg-warm-gray-50">
+      <section ref={shineRef} className="shine-section relative z-0 py-16 px-4 bg-warm-gray-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
             About Me
@@ -303,7 +322,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="relative z-0 py-8 text-center text-gray-500">
+      <footer className="relative z-0 py-8 text-center text-gray-500 bg-blue-gradient-animate">
         <p>© {new Date().getFullYear()} Vien Hoang. All rights reserved.</p>
       </footer>
 

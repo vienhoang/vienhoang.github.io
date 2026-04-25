@@ -72,9 +72,63 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
+@keyframes blueGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shine-move {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
 @layer utilities {
   .animate-shake {
     display: inline-block;
     animation: shake 1s ease-in-out !important;
+  }
+  
+  .bg-blue-gradient-animate {
+    background: linear-gradient(45deg, rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0));
+    background-size: 300% 300%;
+    animation: blueGradientShift 10s ease infinite;
+  }
+
+  .shine-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shine-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(59, 130, 246, 0) 0%,
+      rgba(59, 130, 246, 0.3) 50%,
+      rgba(59, 130, 246, 0) 100%
+    );
+    transform: skewX(-20deg);
+    opacity: 0;
+  }
+
+  .shine-section.shine-active::before {
+    animation: shine-move 2s ease-out forwards;
+    opacity: 1;
   }
 }
